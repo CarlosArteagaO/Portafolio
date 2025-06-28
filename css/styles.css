@@ -145,7 +145,7 @@ h1 {
 .portfolio,
 .contact-section {
   width: 100vw;
-  background-color: #191c32;
+  background-color: #191c32; /*#191c32* , #e1ddb8 */
   color: #fff;
 }
 
