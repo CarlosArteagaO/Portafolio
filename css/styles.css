@@ -46,7 +46,7 @@ body {
 }
 
 .menu a {
-  color: #1f1f1f;
+  color: #333333; /* Oscurecido para mejor contraste */
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 8px;
@@ -100,6 +100,22 @@ h1 {
   box-shadow: none;
 }
 
+.project-details-button,
+.project-details-button a {
+  background-color: #c59d5f;
+  color: #fff;
+  border-radius: 20px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.project-details-button:hover,
+.project-details-button a:hover {
+  background-color: #a97b3f;
+}
+
 .main img {
   border: 5px solid #c59d5f;
   border-radius: 12px;
@@ -115,7 +131,7 @@ h1 {
   width: 100vw;
   background-color: #f5f5f5;
   align-items: center;
-  padding: 3em 0;
+  padding: 4em 0; /* Aumentado para más espacio */
 }
 
 .about img {
@@ -154,6 +170,7 @@ h1 {
   width: 100vw;
   background-color: #ffffff;
   color: #1f1f1f;
+  padding: 4em 0; /* Añadido para separar secciones */
 }
 
 .portfolio-heading,
@@ -185,6 +202,7 @@ h1 {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
   transition: transform 0.3s ease;
+  margin-bottom: 3em; /* Añadido para más espacio abajo */
 }
 
 .card:hover {
@@ -213,7 +231,7 @@ h1 {
 }
 
 .card__proyect-links a {
-  color: #c59d5f;
+  color: #333333; /* Oscurecido */
   font-weight: bold;
   text-decoration: none;
 }
@@ -268,7 +286,7 @@ h1 {
   max-width: 500px;
   height: auto;
   border-radius: 12px;
-  opacity: 0.1;
+  opacity: 0.5; /* Opacidad aumentada para mejor visibilidad */
 }
 
 .form-group {
