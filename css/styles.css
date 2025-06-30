@@ -601,11 +601,21 @@ h1 {
 }
 
 .profile-pic {
-  max-width: 240px;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
   border-radius: 8px;
   margin: 20px auto;
   display: block;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;  /* <-- importante */
+  height: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -628,5 +638,9 @@ h1 {
   .btn {
     width: 100%;
     padding: 12px;
+  }
+
+  .profile-pic {
+    max-width: 380px;
   }
 }
