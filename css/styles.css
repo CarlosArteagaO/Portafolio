@@ -644,3 +644,25 @@ h1 {
     max-width: 380px;
   }
 }
+
+/* Estilo de la imagen */
+.profile-pic {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor que rodea la imagen */
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible !important;
+  height: auto !important;
+  padding: 0 10px;
+  flex-wrap: wrap;
+}
