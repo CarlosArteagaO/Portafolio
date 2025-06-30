@@ -35,3 +35,16 @@ function toggleMenu() {
     toggle_close.style.display = "none";
   }
 }
+
+// Nuevo código para cerrar el menú al hacer clic en un enlace
+const menuLinks = menu.querySelectorAll("a");
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    // Quitar clase que muestra menú
+    menu.classList.remove("show-menu");
+    // Restaurar iconos toggle
+    toggle_open.style.display = "block";
+    toggle_close.style.display = "none";
+  });
+});
