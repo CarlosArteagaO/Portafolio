@@ -558,3 +558,22 @@ textarea {
     box-shadow: none;
   }
 }
+
+.download-cv {
+  padding: 10px 20px;
+  background-color: aqua;
+  color: #191c32;
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, 0.69);
+}
+
+.download-cv:hover {
+  background-color: #e0f7f5;
+  box-shadow: none;
+}
