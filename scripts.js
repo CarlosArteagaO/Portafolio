@@ -48,3 +48,17 @@ menuLinks.forEach((link) => {
     toggle_close.style.display = "none";
   });
 });
+
+window.addEventListener("scroll", () => {
+  const mainImg = document.querySelector(".main img");
+  if (!mainImg) return;
+
+  // Obtiene la posición del scroll vertical
+  const scrollY = window.scrollY;
+
+  // Modifica la posición vertical de la imagen (puedes ajustar el factor)
+  // Aquí la imagen se mueve hacia arriba más lento que el scroll para efecto parallax
+  const offset = scrollY * 0.3;
+
+  mainImg.style.transform = `translateY(${offset}px)`;
+});
