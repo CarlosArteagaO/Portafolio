@@ -345,22 +345,46 @@ textarea {
   background-color: #6bf5e1;
 }
 
-/* FOOTER */
+/* Footer */
+
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200px;
+  padding: 2em;
   background-color: aqua;
-  color: #191c32;
-  padding: 2rem 1.5rem;
-  text-align: center;
 }
 
 .footer-content h2 {
-  font-size: 2rem;
+  font-size: 3em;
 }
 
 .footer-content h5 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.5em;
+  text-align: center;
 }
+
+.sotial-networks {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin-top: 1em;
+}
+
+.sotial-networks i {
+  font-size: 1.5em;
+}
+
+.portfolio,
+.contact-section {
+  width: 100vw;
+  background-color: #191c32;
+  color: #fff;
+}
+
 
 .social-networks {
   display: flex;
@@ -650,72 +674,4 @@ textarea {
     align-items: flex-start;
     gap: 1rem;
   }
-}
-
-/* Sección Automatización */
-#automatizacion {
-  padding: 40px 0;
-  background-color: #f9f9f9; /* Un fondo suave para diferenciar */
-}
-
-#automatizacion .portfolio-heading h2 {
-  font-size: 2.2rem;
-  color: #222;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-#automatizacion .divider {
-  width: 100px;
-  height: 4px;
-  background-color: #0077cc;
-  margin: 0 auto 30px;
-  border-radius: 2px;
-}
-
-#automatizacion .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-#automatizacion .card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
-  width: 100%;
-  max-width: 450px;
-  text-align: center;
-}
-
-#automatizacion .card__title h3 {
-  color: #0077cc;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-#automatizacion p {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-#automatizacion .card__proyect-links a {
-  display: inline-block;
-  color: #0077cc;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  border: 2px solid #0077cc;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#automatizacion .card__proyect-links a:hover {
-  background-color: #0077cc;
-  color: white;
 }
