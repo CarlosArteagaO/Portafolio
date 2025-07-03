@@ -577,3 +577,145 @@ textarea {
   background-color: #e0f7f5;
   box-shadow: none;
 }
+
+.btn-download {
+  background-color: #00bfa6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #009f8b;
+}
+
+@media (max-width: 768px) {
+  .btn-download {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.btn-download {
+  background-color: #00bfa6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #009f8b;
+}
+
+/* Responsivo: ocultar botón en móvil */
+@media (max-width: 768px) {
+  .btn-download {
+    display: none;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* Sección Automatización */
+#automatizacion {
+  padding: 40px 0;
+  background-color: #f9f9f9; /* Un fondo suave para diferenciar */
+}
+
+#automatizacion .portfolio-heading h2 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#automatizacion .divider {
+  width: 100px;
+  height: 4px;
+  background-color: #0077cc;
+  margin: 0 auto 30px;
+  border-radius: 2px;
+}
+
+#automatizacion .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#automatizacion .card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+#automatizacion .card__title h3 {
+  color: #0077cc;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+#automatizacion p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#automatizacion .card__proyect-links a {
+  display: inline-block;
+  color: #0077cc;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid #0077cc;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#automatizacion .card__proyect-links a:hover {
+  background-color: #0077cc;
+  color: white;
+}
