@@ -47,3 +47,25 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const textElement = document.getElementById("typing-text");
+  const fullText = textElement.textContent;
+  textElement.textContent = ""; // limpiar texto
+
+  let index = 0;
+
+  textElement.classList.add("typing");
+
+  function type() {
+    if (index < fullText.length) {
+      textElement.textContent += fullText.charAt(index);
+      index++;
+      setTimeout(type, 120); // velocidad de escritura
+    } else {
+      textElement.classList.remove("typing"); // quitar cursor al terminar
+    }
+  }
+
+  type();
+});

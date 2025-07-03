@@ -794,5 +794,26 @@ header + * {
   scroll-margin-top: 80px; /* Ajusta este valor según la altura de tu header */
 }
 
+#typing-text {
+  border-right: 2px solid aqua; /* cursor vertical */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Cursor parpadeante */
+@keyframes blink-caret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: aqua;
+  }
+}
+
+#typing-text.typing {
+  animation: blink-caret 1s step-end infinite;
+}
+
+
 
 
