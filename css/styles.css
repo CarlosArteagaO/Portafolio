@@ -10,17 +10,43 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+@media screen and (max-width: 800px) {
+  .main img {
+    width: 100%;        /* ocupa todo el ancho disponible */
+    height: auto;       /* altura proporcional */
+    max-width: 350px;   /* opcional, limita tamaño máximo */
+    object-fit: contain; /* ajusta la imagen para que se vea completa sin recortes */
+  }
+}
+
+
 .wrapper {
-  width: 100vw;
+  width: 100vw; 
   height: 100vh;
+  padding-top: 70px;
   background-color: #191c32;
   color: #fff;
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #2b3058;
+  z-index: 1000;
+  padding: 1em 2em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
   display: flex;
-  justify-content: space-between;
-  padding: 2em;
+  justify-content: space-between; /* importante para separar logo y menú */
+  align-items: center;
+}
+
+.navbar.scrolled {
+  background-color: #1c2345;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
 }
 
 .brand {
@@ -673,12 +699,15 @@ h1 {
 }
 
 #img-contact {
-  opacity: 10%;
+  opacity: 0.1; /* tenue en desktop */
 }
 
-#img-contact {
-  opacity: 10%;
+@media screen and (max-width: 800px) {
+  #img-contact {
+    opacity: 1; /* visible al 100% en móvil */
+  }
 }
+
 
 /* NUEVO */
 
@@ -727,4 +756,43 @@ a:hover,
     background-color: azure;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .container-contact {
+    flex-direction: column; /* apila verticalmente imagen y formulario */
+    align-items: center;    /* centra horizontalmente */
+    gap: 2rem;              /* espacio entre imagen y formulario */
+  }
+
+  .contact-section img {
+    width: 90vw;
+    height: auto;
+    max-height: 400px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .form-group {
+    width: 90vw; /* que el formulario ocupe casi todo el ancho móvil */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #img-contact {
+    opacity: 0.3; /* opacidad baja para móvil */
+    max-width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* Ajuste para evitar que el header tape la sección anclada */
+section, 
+div[id], /* para otros contenedores con id usados en anclas */
+header + * {
+  scroll-margin-top: 80px; /* Ajusta este valor según la altura de tu header */
+}
+
+
 
