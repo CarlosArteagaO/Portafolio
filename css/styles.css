@@ -160,28 +160,28 @@ h1 {
   color: #fff;
 }
 
-.portfolio-heading {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-}
-
-
-.portfolio-heading h2 {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
-  text-align: center;
-  color: #fff;
-  word-break: break-word;
-  line-height: 1.2;
-  padding: 0 1rem; /* margen lateral para que no toque los bordes */
-}
-
 @media screen and (max-width: 800px) {
   .portfolio-heading {
-    padding: 3em 1em;
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .portfolio-heading h2 {
+    font-size: 1.5em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90vw;
+  }
+}
+
+.portfolio-heading h2 {
+  font-size: 2.5em;
+  color: #fff;
+  text-align: center;
 }
 
 .portfolio .container {
