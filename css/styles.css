@@ -169,14 +169,19 @@ h1 {
 }
 
 
-.portfolio-heading h2,
-.contact-heading h2,
-.habilidades h2 {
-  font-size: clamp(1.8em, 5vw, 2.5em); /* se adapta automáticamente al tamaño de pantalla */
+.portfolio-heading h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   text-align: center;
   color: #fff;
-  word-break: break-word; /* evita desbordes por palabras largas */
-  margin-bottom: 0.5em;
+  word-break: break-word;
+  line-height: 1.2;
+  padding: 0 1rem; /* margen lateral para que no toque los bordes */
+}
+
+@media screen and (max-width: 800px) {
+  .portfolio-heading {
+    padding: 3em 1em;
+  }
 }
 
 .portfolio .container {
