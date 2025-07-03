@@ -170,9 +170,13 @@ h1 {
 
 
 .portfolio-heading h2,
-.contact-heading h2 {
-  font-size: 2.5em;
+.contact-heading h2,
+.habilidades h2 {
+  font-size: clamp(1.8em, 5vw, 2.5em); /* se adapta automáticamente al tamaño de pantalla */
+  text-align: center;
   color: #fff;
+  word-break: break-word; /* evita desbordes por palabras largas */
+  margin-bottom: 0.5em;
 }
 
 .portfolio .container {
