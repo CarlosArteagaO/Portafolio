@@ -47,8 +47,8 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
+/*
+//document.addEventListener("DOMContentLoaded", () => {
   const textElement = document.getElementById("typing-text");
   const fullText = textElement.textContent;
   textElement.textContent = ""; // limpiar texto
@@ -64,6 +64,64 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(type, 120); // velocidad de escritura
     } else {
       textElement.classList.remove("typing"); // quitar cursor al terminar
+    }
+  }
+
+  type();
+});*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  const textElement = document.getElementById("typing-text");
+
+  const texts = [
+    "QA Engineer",
+    "QA Automation",
+    "API Testing",
+    "Data & ETL Testing",
+  ];
+
+  let textIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function type() {
+    const currentText = texts[textIndex];
+
+    if (!deleting) {
+      textElement.textContent = currentText.substring(0, charIndex + 1);
+
+      charIndex++;
+
+      if (charIndex === currentText.length) {
+        setTimeout(() => {
+          deleting = true;
+          type();
+        }, 1800);
+
+        return;
+      }
+
+      setTimeout(type, 100);
+    } else {
+      textElement.textContent = currentText.substring(0, charIndex - 1);
+
+      charIndex--;
+
+      if (charIndex === 0) {
+        deleting = false;
+
+        textIndex++;
+
+        if (textIndex >= texts.length) {
+          textIndex = 0;
+        }
+
+        setTimeout(type, 400);
+
+        return;
+      }
+
+      setTimeout(type, 60);
     }
   }
 
