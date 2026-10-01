@@ -545,7 +545,7 @@ h1 {
 
 .form-group .btn-submit {
   padding: 10px 20px;
-  margin: 1em;
+  margin: 1em 0;
   border-radius: 20px;
   border: none;
   text-transform: uppercase;
@@ -834,6 +834,7 @@ header + * {
   object-fit: contain;
   border-radius: 12px 12px 0 0;
   transition: transform 0.3s ease;
+  max-width: 100%
 }
 
 .card__img-auto img:hover,
@@ -1071,4 +1072,271 @@ header + * {
   text-align: left;
 }
 
+/* ========================================
+   PROYECTOS DE AUTOMATIZACIÓN
+======================================== */
+
+.card__description {
+  padding: 0 20px;
+}
+
+.card__description p {
+  margin: 0;
+  line-height: 1.5;
+  color: #fff;
+}
+
+
+.card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 15px 20px 20px;
+}
+
+.card__tech span {
+  background-color: #191c32;
+  color: #00f7ff;
+  padding: 0.35em 0.7em;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.card__proyect-links {
+  padding-bottom: 20px;
+}
+
+/* ========================================
+   AJUSTE DE TARJETAS DE AUTOMATIZACIÓN
+======================================== */
+
+.portfolio .container {
+  align-items: stretch;
+}
+
+.portfolio .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio .card__proyect-links {
+  margin-top: auto;
+}
+
+/* ========================================
+   ENFOQUE DE TESTING
+======================================== */
+
+.testing-process {
+  width: 100%;
+  padding: 5em 0;
+  background-color: #ffffff;
+}
+
+.testing-process-heading {
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+.testing-process-heading h2 {
+  font-size: 2.8em;
+  color: #191c32;
+  margin-bottom: 0.5em;
+}
+
+.testing-process-heading .divider {
+  margin: 0 auto 1.5em;
+}
+
+.testing-process-heading p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #191c32;
+}
+
+.testing-process-container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.testing-step {
+  text-align: center;
+  padding: 2em 1.5em;
+  position: relative;
+}
+
+.testing-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 1.2em;
+  border-radius: 50%;
+  background-color: #2f3566;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testing-icon i {
+  color: aqua;
+  font-size: 1.5rem;
+}
+
+.testing-step h3 {
+  color: #191c32;
+  font-size: 1.25rem;
+  margin-bottom: 0.7em;
+}
+
+.testing-step p {
+  color: #191c32;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* ========================================
+   RESPONSIVE - ENFOQUE DE TESTING
+======================================== */
+
+@media screen and (max-width: 768px) {
+
+  .testing-process {
+    padding: 3em 0;
+  }
+
+  .testing-process-heading h2 {
+    font-size: 2.2em;
+  }
+
+  .testing-process-heading p {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .testing-process-container {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+
+  .testing-step {
+    padding: 1.5em 1em;
+  }
+
+}
+
+/* ========================================
+   HOVER - ENFOQUE DE TESTING
+======================================== */
+
+.testing-step {
+  transition: transform 0.3s ease;
+}
+
+.testing-step:hover {
+  transform: translateY(-6px);
+}
+
+.testing-step .icon {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.testing-step:hover .icon {
+  transform: scale(1.1);
+  background-color: #191c32;
+}
+
+.testing-step h3 {
+  transition: color 0.3s ease;
+}
+
+.testing-step:hover h3 {
+  color: aqua;
+}
+
+/* ========================================
+   HOVER - ENFOQUE DE TESTING
+======================================== */
+
+.testing-step {
+  transition: transform 0.3s ease;
+}
+
+.testing-step:hover {
+  transform: translateY(-6px);
+}
+
+.testing-step .testing-icon {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.testing-step:hover .testing-icon {
+  transform: scale(1.1);
+  background-color: #191c32;
+}
+
+.testing-step h3 {
+  transition: color 0.3s ease;
+}
+
+.testing-step:hover h3 {
+  color: aqua;
+}
+
+/* ========================================
+   CONEXIONES - ENFOQUE DE TESTING
+======================================== */
+
+.testing-process-container {
+  position: relative;
+}
+
+/* Línea horizontal de la primera fila */
+.testing-step:nth-child(1)::after,
+.testing-step:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  width: 120px;
+  height: 2px;
+  background: aqua;
+  opacity: 0.35;
+}
+
+/* Primera conexión */
+.testing-step:nth-child(1)::after {
+  right: -60px;
+}
+
+/* Segunda conexión */
+.testing-step:nth-child(2)::after {
+  right: -60px;
+}
+
+/* Línea horizontal de la segunda fila */
+.testing-step:nth-child(4)::after,
+.testing-step:nth-child(5)::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  width: 120px;
+  height: 2px;
+  background: aqua;
+  opacity: 0.35;
+}
+
+.testing-step:nth-child(4)::after {
+  right: -60px;
+}
+
+.testing-step:nth-child(5)::after {
+  right: -60px;
+}
 
