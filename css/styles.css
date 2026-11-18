@@ -815,7 +815,8 @@ header + * {
 }
 
 .card__img-auto,
-.card__img-heroku {
+.card__img-heroku,
+.card__img-crowdar {
   width: 100%;
   height: 180px; /* mismo alto para ambas */
   background-color: #111;
@@ -828,7 +829,8 @@ header + * {
 }
 
 .card__img-auto img,
-.card__img-heroku img {
+.card__img-heroku img,
+.card__img-crowdar img {
   width: auto;
   height: 100%;
   object-fit: contain;
@@ -838,7 +840,8 @@ header + * {
 }
 
 .card__img-auto img:hover,
-.card__img-heroku img:hover {
+.card__img-heroku img:hover,
+.card__img-crowdar img {
   transform: scale(1.05);
 }
 
@@ -1338,5 +1341,57 @@ header + * {
 
 .testing-step:nth-child(5)::after {
   right: -60px;
+}
+
+
+/* Ajuste para tres proyectos de automatización */
+.portfolio .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1em;
+}
+
+.portfolio .card {
+    flex: 0 1 300px;
+    margin: 1em;
+}
+
+/* Adaptación para móviles */
+@media screen and (max-width: 800px) {
+    .portfolio .container {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+/* Imagen del proyecto Crowdar */
+.card__img-crowdar {
+    width: 100%;
+    height: 180px;
+    background-color: #111;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card__img-crowdar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 
